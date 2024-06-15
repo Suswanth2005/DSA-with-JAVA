@@ -1,0 +1,43 @@
+class Vehicle{
+    String name;
+    int Model_num;
+}
+class car extends Vehicle //use "Extends" keyword to inherit the class
+{
+    void show()           //using the property of parent class
+    {
+        name="Ferrari";
+        Model_num=3467;
+        System.out.println(name+" "+Model_num);
+        
+    }
+    void cardetails()   //its own property
+    {
+        System.out.println("Published on 30/3/2011");
+    }
+}
+class bike extends Vehicle{
+    void show()
+    {
+        name="Harley Davidson";
+        Model_num=7654;
+        System.out.println(name+" "+Model_num);
+    }
+    void bikedetails()
+    {
+        System.out.println("published on 24/3/2009");
+    }
+}
+public class main{
+    public static void main(String [] args)
+    {
+        car c= new car();
+        c.show();
+        c.cardetails();
+        
+        bike b=new bike(); // reference of child n instance of child so it will call all the methods of its own as well as inherited
+        b.show();
+        b.bikedetails();
+        
+    }
+}
